@@ -6,7 +6,7 @@ function Employee(employeeId,fullName,depatment,level,imageURL,salary){
      this.depatment=depatment;
      this.level=level;
      this.imageURL=imageURL;
-     this.salary=salary;
+     this.salary=0;
     
 };
 let netSalary;
@@ -26,28 +26,38 @@ let netSalary;
     }
 
 }
-// Employee.prototype.renderEmployee = function() {
-//     const employeeContainer = document.createElement('div');
-//     employeeContainer.classList.add('employee-container');
-    
-//     const employeeName = document.createElement('h2');
-//     employeeName.textContent = this.fullName;
-    
-//     const employeeSalary = document.createElement('p');
-//     employeeSalary.textContent = `Salary: ${this.calcSalary()}`;
-    
-//     employeeContainer.appendChild(employeeName);
-//     employeeContainer.appendChild(employeeSalary);
-    
-//     // Append the employee container to the HTML page
-//     document.body.appendChild(employeeContainer);
-//   }
+
 Employee.prototype.render = function() {
-    document.write(`Employee Name is : ${this.fullName} and salary is = ${netSalary}<br/>`);
-  };
-  
-  // Render the employee objects on the page
+    
+   // document.write(`Employee Name is : ${this.fullName} and salary is = ${netSalary}<br/>`);
+    const employeesContainer = document.getElementById("employees-container");
  
+   const row = document.createElement("tr");
+ 
+   const idCell = document.createElement("td");
+   idCell.textContent =` ${this.employeeId}`;
+   row.appendChild(idCell);
+ 
+   const nameCell = document.createElement("td");
+   nameCell.textContent = `${this.fullName}`;
+   row.appendChild(nameCell);
+ 
+   const departmentCell = document.createElement("td");
+   departmentCell.textContent = `${this.depatment}`;
+   row.appendChild(departmentCell);
+ 
+   const levelCell = document.createElement("td");
+   levelCell.textContent = `${this.level}`;
+   row.appendChild(levelCell);
+ 
+   const salaryCell = document.createElement("td");
+   salaryCell.textContent = `${this.calcSalary()}`;
+   row.appendChild(salaryCell);
+ 
+   employeesContainer.appendChild(row);
+  };
+
+    
 
 
 let emp1 = new Employee(1000, 'Ghazi Samer', 'Administration',  'Senior','');
@@ -57,6 +67,7 @@ let emp4 = new Employee(1003, 'Safi Walid', 'Administration', 'Mid_Senior');
 let emp5 = new Employee(1004, '	Omar Zaid', 'Development', 'Senior');
 let emp6 = new Employee(1005, 'Rana Saleh', 'Development', 'Junior');
 let emp7 = new Employee(1006, 'Hadi Ahmad', 'Finance', 'Mid_Senior');
+
 emp1.calcSalary();
  emp1.render();
 
@@ -78,7 +89,10 @@ emp1.calcSalary();
  emp7.calcSalary();
  emp7.render();
 
+ 
+ emp7.calcSalary();
+ emp7.render();
 
-  
-//    console.log(emp1);
-//    console.log(emp1.fullName+" Salary = "+emp1.calcSalary());
+
+
+

@@ -14,14 +14,7 @@
   </head>
   <body>
     <header>
-      <section>
-        <!-- <img
-          src="assets/check-list-clipboard-list-svgrepo-com.svg"
-          height="75px"
-          width="65px"
-        /> -->
-        <!-- <i id="icon1" class="fa-solid fa-list-check fa-2xl"></i> -->
-      </section>
+      
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
@@ -34,7 +27,7 @@
    <main>
 
     
-    <script src="app.js"></script>
+   
        <div >
         <table>
           <thead>
@@ -51,43 +44,7 @@
           </tbody>
         </table>
        </div>
-  
-<script>
-
-const employees = [emp1, emp2, emp3, emp4, emp5, emp6, emp7];
-
-const employeesContainer = document.getElementById("employees-container");
-
-// Loop through the employees array and generate HTML for each employee
-for (let i = 0; i < employees.length; i++) {
-  const employee = employees[i];
-  const row = document.createElement("tr");
-
-  const idCell = document.createElement("td");
-  idCell.textContent = employee.employeeId;
-  row.appendChild(idCell);
-
-  const nameCell = document.createElement("td");
-  nameCell.textContent = employee.fullName;
-  row.appendChild(nameCell);
-
-  const departmentCell = document.createElement("td");
-  departmentCell.textContent = employee.depatment;
-  row.appendChild(departmentCell);
-
-  const levelCell = document.createElement("td");
-  levelCell.textContent = employee.level;
-  row.appendChild(levelCell);
-
-  const salaryCell = document.createElement("td");
-  salaryCell.textContent = employee.calcSalary();
-  row.appendChild(salaryCell);
-
-  employeesContainer.appendChild(row);
-}
-
-
-</script>
+       <script src="app.js"></script>
 
    </main>
    <footer id="foo">
