@@ -9,9 +9,10 @@ body{
 
 header{
     display: flex;
+    padding-bottom: 1%;
 }
 nav {
-    background-color: #B1A296;
+    background-color: #EDF1D6;
     overflow: auto;
     justify-content: right,t;
    
@@ -37,6 +38,63 @@ nav {
         background-color: #ffffffc4;
         transition: background-color 0.3s ease;
       }
+      .signupSection {
+        background-repeat: no-repeat;
+        position: relative;
+        margin-left: 22%;
+       
+        width: 50%;
+        height: 500px;
+        text-align: center;
+        display: flex;
+        color: white;
+        box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
+      }
+      
+  
+      
+      .signupForm {
+        width: 100%;
+        padding: 30px 0;
+        background: rgba(20, 40, 40, .8);
+        transition: .2s;
+       
+      }
+      
+      .inputFields {
+        margin: 15px 0;
+        font-size: 16px;
+        padding: 10px;
+        width: 250px;
+        border: 1px solid #379683;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        background: rgba(20, 20, 20, .2);
+        color: white;
+        outline: none;
+      }
+      
+      /* .noBullet {
+        list-style-type: none;
+        padding: 0;
+        display: block;
+      } */
+      
+      #join-btn {
+        border: 1px solid #379683;
+        background: rgba(20, 20, 20, .6);
+        font-size: 18px;
+        color: white;
+        margin-top: 20px;
+        padding: 10px 50px;
+        cursor: pointer;
+        transition: .4s;
+        
+      }#join-btn:hover {
+          background: rgba(20, 20, 20, .8);
+          padding: 10px 80px;
+        }
   
       table {
         margin-left: 22%;
@@ -47,6 +105,7 @@ nav {
         font-family: 'Helvetica Neue', sans-serif;
         font-size: 16px;
         color: #333;
+        box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);  
       }
       
       thead {
@@ -80,7 +139,7 @@ nav {
 
   footer {
   
-    background-color: #557A95;
+    background-color: #EDF1D6;
     text-align: center;
     position: static;
     bottom:0;
@@ -90,3 +149,52 @@ nav {
   
 
   }
+  #card{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+    #card div{
+      height: 400px;
+    width: 320px;
+    background-color: rgba(255, 255, 255, 0.39);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    position: relative;
+     margin: auto;
+
+    border-radius: 8px;
+    -webkit-box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
+            box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
+    font-family: 'Poppins',sans-serif;
+      /* display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #89b400;
+      padding: 0.5rem;
+      border: 1px solid #050505;
+      border-radius: 0.5rem; */
+    }
+
+#card img{
+  height: 120px;
+  width: 120px;
+  background-color: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 50%;
+  position: relative;
+  margin: 30px auto 20px  auto;
+ 
+
+}
+
+#card div:hover{
+  color: #379683;
+}
