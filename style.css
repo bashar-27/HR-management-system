@@ -141,7 +141,7 @@ nav {
   
     background-color: #EDF1D6;
     text-align: center;
-    position: static;
+    position: relative;
     bottom:0;
     width: 100%;
     margin-top: auto;
