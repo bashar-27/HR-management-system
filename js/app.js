@@ -10,24 +10,7 @@ function Employee(employeeId, fullName, depatment, level, salary,imageURL ) {
  allEmp.push(this);
 }
 
-// let netSalary=0;
-//  function calcSalary() {
-  
-//   let empSalary=0;
-//   for(let i = 0 ; i<allEmp.length; i++){
-//   switch (allEmp[i].level) {
-//     case "Senior":
-//       empSalary = Math.floor(Math.random() * 501) + 1500;
-//       return (netSalary = parseInt(empSalary - (empSalary * 7.5) / 100));
-//     case "Mid_Senior":
-//       empSalary = Math.random() * 501 + 1000;
-//       return (netSalary = parseInt(empSalary - (empSalary * 7.5) / 100));
-//     case "Junior":
-//       empSalary = Math.random() * 501 + 500;
-//       return (netSalary = parseInt(empSalary - empSalary * (7.5 / 100)));
-      
-//   }
-// }};
+
 function calcSalary() {
   for (let i = 0; i < allEmp.length; i++) {
   
@@ -36,7 +19,7 @@ function calcSalary() {
           allEmp[i].salary = parseInt(allEmp[i].salary - (allEmp[i].salary * 7.5 / 100))
           return allEmp[i].salary;
       }
-      else if (allEmp[i].level == "Mid_Senior") {
+      else if (allEmp[i].level == "Mid-Senior") {
           allEmp[i].salary = Math.round(Math.floor(Math.random() * (1500 - 1000) + 1000))
           allEmp[i].salary = parseInt(allEmp[i].salary - (allEmp[i].salary * 7.5 / 100))
           return allEmp[i].salary;
@@ -95,7 +78,7 @@ function calcSalary() {
   // salaryEl.textContent = `Salary = ${allEmp[i].salary}JD`;
   // divEl.appendChild(salaryEl); 
   
-  // card.appendChild(divEl);
+   card.appendChild(divEl);
 
 }};
 
@@ -190,7 +173,7 @@ function newEmployee(e) {
   // console.log('allEmp Arr',allEmp)
   let jsonArr = JSON.stringify(allEmp)
   localStorage.setItem('allEmp',jsonArr)
-  console.log("allemp ",jsonArr);
+  //console.log("allemp ",jsonArr);
 
 }
 function getEmpFromStorage(){
@@ -204,4 +187,4 @@ console.log(allEmp);
 getEmpFromStorage();
 renderCard();
 
-
+console.log(allEmp)

@@ -18,7 +18,7 @@ let avgFin = 0;
 
 function render2() {
 
-    let employeesContainer = document.getElementById("employees-container");
+    // let employeesContainer = document.getElementById("employees-container");
     for (let i = 0; i < employees.length; i++) {
         if (employees[i].depatment == "Administration") {
             sumAdmistorer++;
