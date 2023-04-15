@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,7 +18,7 @@
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="html/accounting.html" target="_blank">Accounting</a></li>
+          <li><a href="accounting.html" target="_blank">Accounting</a></li>
           <li><a href="#foo">Contact</a></li>
         </ul>
       </nav>
@@ -28,7 +28,7 @@
 
     <div class="signupSection">
       
-      <form action="#" method="POST" class="signupForm" name="signupform" id="signupForm">
+      <form action="#" method="POST" class="signupForm" name="signupform" id="empForm">
         <h2>Add New Employee</h2>
         
           <div>
@@ -66,12 +66,13 @@
       <option value="assets/Safi.jpg">Safi</option>
       <option value="assets/Tamara.jpg">Tamara</option>
     </select>
+    <img id="selectImage" src="" alt="">
+    </div>
+    <div>
+      <label for="imag">write src</label>
+      <input type="text" name="imag"  required>
     </div>
 
-  <!-- <div >
-    <label for="image"></label>
-    <input type="file" id="image" name="image" accept="image/*" class="inputFields" >
-  </div> -->
           <div id="center-btn">
             <input type="submit" id="join-btn" name="submit" alt="Join" value="submit">
           </div>
@@ -81,36 +82,21 @@
     <div>
           <section id="card" class="sec"> </section>
         </div>
-       <!-- <div >
-        <table>
-          <thead>
-            <tr>
-              <th>Employee ID</th>
-              <th>Full Name</th>
-              <th>Department</th>
-              <th>Level</th>
-              <th>Salary</th>
-            </tr>
-          </thead>
-          <tbody id="employees-container"> -->
-            <!-- Employee data will be dynamically added here using JavaScript -->
-          <!-- </tbody>
-        </table>
-       </div> -->
-       <script src="js/app.js"></script>
-       <div class="container"></div>
-
-   </main>
-   <footer id="foo">
-    <div>
-      <h5 id="con">Contact Us</h5>
-      <i class="fa-solid fa-phone fa-beat-fade"></i>
-      <i class="fa-brands fa-facebook fa-beat-fade"></i>
-      <i class="fa-brands fa-github fa-beat-fade"></i>
-      <i class="fa-brands fa-stack-overflow fa-beat-fade"></i>
-    </div>
-    <p>&copy; 2023 HR Management Sys App by -Bashar-</p>
-  </footer>
+      
+        <div class="container"></div>
+        
+      </main>
+      <footer id="foo">
+        <div>
+          <h5 id="con">Contact Us</h5>
+          <i class="fa-solid fa-phone fa-beat-fade"></i>
+          <i class="fa-brands fa-facebook fa-beat-fade"></i>
+          <i class="fa-brands fa-github fa-beat-fade"></i>
+          <i class="fa-brands fa-stack-overflow fa-beat-fade"></i>
+        </div>
+        <p>&copy; 2023 HR Management Sys App by -Bashar-</p>
+      </footer>
+      <script src="js/app.js"></script>
 </body>
 </html>
 
