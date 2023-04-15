@@ -10,43 +10,48 @@ function Employee(employeeId, fullName, depatment, level, salary,imageURL ) {
  allEmp.push(this);
 }
 
-// let netSalary=0;
-//  function calcSalary() {
+
+// function calcSalary() {
+//   for (let i = 0; i < allEmp.length; i++) {
   
-//   let empSalary=0;
-//   for(let i = 0 ; i<allEmp.length; i++){
-//   switch (allEmp[i].level) {
-//     case "Senior":
-//       empSalary = Math.floor(Math.random() * 501) + 1500;
-//       return (netSalary = parseInt(empSalary - (empSalary * 7.5) / 100));
-//     case "Mid_Senior":
-//       empSalary = Math.random() * 501 + 1000;
-//       return (netSalary = parseInt(empSalary - (empSalary * 7.5) / 100));
-//     case "Junior":
-//       empSalary = Math.random() * 501 + 500;
-//       return (netSalary = parseInt(empSalary - empSalary * (7.5 / 100)));
-      
-//   }
-// }};
-function calcSalary() {
-  for (let i = 0; i < allEmp.length; i++) {
-  
-      if (allEmp[i].level == "Senior") {
-          allEmp[i].salary = Math.round(Math.floor(Math.random() * (2000 - 1500) + 1500))
-          allEmp[i].salary = parseInt(allEmp[i].salary - (allEmp[i].salary * 7.5 / 100))
-          return allEmp[i].salary;
-      }
-      else if (allEmp[i].level == "Mid_Senior") {
-          allEmp[i].salary = Math.round(Math.floor(Math.random() * (1500 - 1000) + 1000))
-          allEmp[i].salary = parseInt(allEmp[i].salary - (allEmp[i].salary * 7.5 / 100))
-          return allEmp[i].salary;
-      }
-      else {
-          allEmp[i].salary = Math.round(Math.floor(Math.random() * (1000 - 500) + 500))
-          allEmp[i].salary = parseInt(allEmp[i].salary - (allEmp[i].salary * 7.5 / 100))
-          return allEmp[i].salary;
-      }
-  }}
+//       if (allEmp[i].level == "Senior") {
+//           allEmp[i].salary = Math.round(Math.floor(Math.random() * (2000 - 1500) + 1500))
+//           allEmp[i].salary = parseInt(allEmp[i].salary - (allEmp[i].salary * 7.5 / 100))
+//           return allEmp[i].salary;
+//       }
+//       else if (allEmp[i].level == "Mid-Senior") {
+//           allEmp[i].salary = Math.round(Math.floor(Math.random() * (1500 - 1000) + 1000))
+//           allEmp[i].salary = parseInt(allEmp[i].salary - (allEmp[i].salary * 7.5 / 100))
+//           return allEmp[i].salary;
+//       }
+//       else {
+//           allEmp[i].salary = Math.round(Math.floor(Math.random() * (1000 - 500) + 500))
+//           allEmp[i].salary = parseInt(allEmp[i].salary - (allEmp[i].salary * 7.5 / 100))
+//           return allEmp[i].salary;
+//       }
+//   }}
+let netSalary;
+ function calcSalary(){
+    let empSalary;
+    for (let i = 0; i< allEmp.length; i++) {
+    
+    
+    switch(allEmp[i].level){
+        case 'Senior':
+            empSalary=(Math.floor(Math.random()*(501))+1500);
+           return netSalary=parseInt(empSalary-(empSalary* 7.5/100));
+           
+            
+        case 'Mid_Senior':
+            empSalary=Math.random()*(501)+1000;
+            return  netSalary=parseInt(empSalary-(empSalary* 7.5/100));
+        case 'Junior':
+            empSalary=Math.random()*(501)+500;
+            return   netSalary=parseInt(empSalary-(empSalary* (7.5/100)));
+
+    }
+  }
+}
 
 
   function generateEmployeeId () {
@@ -95,7 +100,7 @@ function calcSalary() {
   // salaryEl.textContent = `Salary = ${allEmp[i].salary}JD`;
   // divEl.appendChild(salaryEl); 
   
-  // card.appendChild(divEl);
+   card.appendChild(divEl);
 
 }};
 
@@ -182,15 +187,15 @@ function newEmployee(e) {
   let name = e.target.FullName.value;
   let dep = e.target.department.value;
   let level = e.target.level.value;
-  let salary = calcSalary();
+  let salary = calcSalary()||542;
   let empId = generateEmployeeId();
   let addEmp = new Employee(empId, name, dep, level,salary, imgURL);
 
 
-  // console.log('allEmp Arr',allEmp)
-  let jsonArr = JSON.stringify(allEmp)
-  localStorage.setItem('allEmp',jsonArr)
-  console.log("allemp ",jsonArr);
+   console.log('allEmp Arr',allEmp)
+  let jsonArr = JSON.stringify(allEmp);
+  localStorage.setItem('allEmp',jsonArr);
+  //console.log("allemp ",jsonArr);
 
 }
 function getEmpFromStorage(){
@@ -204,4 +209,4 @@ console.log(allEmp);
 getEmpFromStorage();
 renderCard();
 
-
+console.log(allEmp)

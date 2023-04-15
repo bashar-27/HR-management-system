@@ -18,20 +18,20 @@ let avgFin = 0;
 
 function render2() {
 
-    let employeesContainer = document.getElementById("employees-container");
+    // let employeesContainer = document.getElementById("employees-container");
     for (let i = 0; i < employees.length; i++) {
-        if (employees[i].depatment == "Administration") {
+        if (employees[i].depatment === "Administration") {
             sumAdmistorer++;
             salaryAdminstor += employees[i].salary;
             avgAdmin = salaryAdminstor / sumAdmistorer;
         }
-        else if (employees[i].depatment == "Marketing") {
+        else if (employees[i].depatment === "Marketing") {
             sumMarket++;
             salaryMarket += employees[i].salary;
             avgMarket = salaryMarket / sumMarket;
 
         }
-        else if (employees[i].depatment == "Development") {
+        else if (employees[i].depatment === "Development") {
             sumDevelopmet++;
             salaryDevelpment += employees[i].salary;
             avgDev = salaryDevelpment / sumDevelopmet;
